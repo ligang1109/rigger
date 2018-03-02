@@ -18,7 +18,7 @@ cd rigger
 
 ## 项目中使用
 
-首先，需要填写指导rigger执行所需要的配置文件，详见：[Rigger配置文件]()
+首先，需要填写指导rigger执行所需要的配置文件，详见：[Rigger配置文件](http://blog.7rule.com/rigger/rconf)
 
 示例运行：
 
@@ -32,4 +32,4 @@ rigger -rconfDir=/home/ligang/devspace/rigger/demo/conf/rigger/ logLevel=1 prjHo
 
 - logLevel: 可选，值见[logLevel](https://github.com/goinbox/golog/blob/master/base.go)
 
-- prjHome：可选，和项目相关，这里是因为demo的配置文件[var.json]()中会用到
+- prjHome：可选，和项目相关，这里是因为demo的配置文件[var.json](https://github.com/ligang1109/rigger/blob/master/demo/conf/rigger/var.json)中会用到
