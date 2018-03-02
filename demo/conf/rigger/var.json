@@ -2,7 +2,7 @@
     "IS_DEV": "true",
     "USER": "${USER}",
     "PRJ_NAME": "rdemo",
-    "PRJ_HOME": "__ARG__(prj_home)",
+    "PRJ_HOME": "__ARG__(prjHome)",
 
     "PRJ_CONF_ROOT": "${PRJ_HOME}/conf",
     "TPL_CONF_ROOT": "${PRJ_CONF_ROOT}/rigger/tpl",
