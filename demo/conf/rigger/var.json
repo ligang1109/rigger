@@ -1,0 +1,33 @@
+{
+    "IS_DEV": "true",
+    "USER": "${USER}",
+    "PRJ_NAME": "rdemo",
+    "PRJ_HOME": "__ARG__(prj_home)",
+
+    "PRJ_CONF_ROOT": "${PRJ_HOME}/conf",
+    "TPL_CONF_ROOT": "${PRJ_CONF_ROOT}/rigger/tpl",
+    "NGX_DATA_ROOT": {
+        "ligang": "/data/nginx",
+        "default": "/usr/local/nginx"
+    },
+
+    "FRONT_DOMAIN": "${USER}.rdemo.com",
+    "FRONT_ACCESS_LOG": "${FRONT_DOMAIN}.log",
+    "FRONT_ERROR_LOG": "${FRONT_DOMAIN}.error.log",
+    "FRONT_HTTP_CONF_TPL": "${TPL_CONF_ROOT}/tpl_front_http.conf",
+    "FRONT_HTTP_CONF_DST": "${PRJ_CONF_ROOT}/http/${USER}_front_http.conf",
+    "FRONT_HTTP_CONF_LN": "${NGX_DATA_ROOT}/conf/include/${FRONT_DOMAIN}.conf",
+
+    "ACCESS_LOG_BUFFER": "1k",
+    "NGX_PORT": "80",
+    "GO_PORT": "__MATH__(6000+${UID})",
+
+    "SERVER_CONF_TPL": "${TPL_CONF_ROOT}/tpl_server_conf.json",
+    "SERVER_CONF_DST": "${PRJ_CONF_ROOT}/server/${USER}_server_conf.json",
+    "SERVER_CONF_LN": "${PRJ_CONF_ROOT}/server_conf.json",
+
+    "NGX_EXEC_PREFIX": {
+        "ligang": "/usr/local/bin/dexec nginx",
+        "default": "sudo /usr/local/nginx/sbin/nginx"
+    }
+}
