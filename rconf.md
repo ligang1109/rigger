@@ -1,4 +1,6 @@
-# 概述
+# Rigger配置文件
+
+## 概述
 
 Rigger的执行过程，通过下面提到的一些配置文件来指定，请将这些配置文件统一放置在一个目录下，如：
 
@@ -11,11 +13,11 @@ drwxr-xr-x. 2 ligang wheel   61 Mar  2 14:24 tpl
 -rw-r--r--. 1 ligang wheel 1097 Mar  2 14:24 var.json
 ```
 
-# var.json
+## var.json
 
 每个人的开发环境都会有不同的地方，例如：路径、port等，可以通过在这个配置文件中定义一些变量，然后在模版中使用的方式来解决这些不同，从而做到配置的统一
 
-## 示例说明
+### 示例说明
 
 ```
 {
@@ -53,7 +55,7 @@ drwxr-xr-x. 2 ligang wheel   61 Mar  2 14:24 tpl
 }
 ```
 
-## 重点说明
+### 重点说明
 
 - 定义的值，请都使用字符串的方式，如"true"，"1"
 - 定义的值如果是路径，请使用绝对路径
@@ -61,7 +63,7 @@ drwxr-xr-x. 2 ligang wheel   61 Mar  2 14:24 tpl
 - `__ARG__(argName)`，这个值是rigger执行时用户通过argName=value这种方式指定的
 - `__MATH__(lvalue[+-*/]rvalue)`，这个值的结果是lvalue和rvalue的运算结果，目前支持+-*/
 
-# tpl.json
+## tpl.json
 
 定义模版文件的解析，模版文件使用的demo中的tpl：
 
@@ -69,7 +71,7 @@ drwxr-xr-x. 2 ligang wheel   61 Mar  2 14:24 tpl
 
 [tpl_front_http.conf](https://github.com/ligang1109/rigger/blob/master/demo/conf/rigger/tpl/tpl_front_http.conf)
 
-## 示例说明
+### 示例说明
 
 ```
 {
@@ -88,11 +90,11 @@ drwxr-xr-x. 2 ligang wheel   61 Mar  2 14:24 tpl
 }
 ```
 
-# action.json
+## action.json
 
 通过模版生成项目所需要的配置文件后，通常会还需要有些初始化类型的操作，如临时目录的创建、webserver的重启等，这个配置文件就用于定义这些方面的行为
 
-## 示例说明
+### 示例说明
 
 ```
 {

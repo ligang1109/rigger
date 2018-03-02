@@ -1,14 +1,12 @@
----
-title:  "Rigger"
----
+# Rigger
 
-# 概述
+## 概述
 
 Rigger是一个项目环境搭建工具，用于解决多人开发时的统一环境配置问题
 
 本项目的示例都是用的项目中的[demo](https://github.com/ligang1109/rigger/tree/master/demo)目录中的内容
 
-# 部署
+## 部署
 
 请先安装[dep](https://golang.github.io/dep/)
 
