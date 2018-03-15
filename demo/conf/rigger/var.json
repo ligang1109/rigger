@@ -27,7 +27,7 @@
     "SERVER_CONF_LN": "${PRJ_CONF_ROOT}/server_conf.json",
 
     "NGX_EXEC_PREFIX": {
-        "ligang": "/usr/local/bin/dexec nginx",
+        "ligang": "/usr/local/bin/dbox exec nginx nginx",
         "default": "sudo /usr/local/nginx/sbin/nginx"
     }
 }
