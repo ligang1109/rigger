@@ -25,13 +25,13 @@ cd rigger
 示例运行：
 
 ```
-rigger -rconfDir=/home/ligang/devspace/rigger/demo/conf/rigger/ logLevel=1 prjHome=/home/ligang/devspace/rigger/demo
+rigger -rconfDir=/home/ligang/devspace/rigger/demo/conf/rigger/ -logLevel=1 prjHome=/home/ligang/devspace/rigger/demo
 ```
 
 示例中的参数说明：
 
 - -rconfDir：必选参数，放置rigger配置文件的目录，请用绝对路径
 
-- logLevel: 可选，值见[logLevel](https://github.com/goinbox/golog/blob/master/base.go)
+- -logLevel: 可选，值见[logLevel](https://github.com/goinbox/golog/blob/master/base.go)
 
 - prjHome：可选，和项目相关，这里是因为demo的配置文件[var.json](https://github.com/ligang1109/rigger/blob/master/demo/conf/rigger/var.json)中会用到
