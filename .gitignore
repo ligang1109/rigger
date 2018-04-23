@@ -11,8 +11,6 @@ pkg
 *DS_Store
 .vscode
 
-vendor
-
 demo/conf/server_conf.json
 demo/conf/server/*.json
 demo/conf/http/*_http.conf
