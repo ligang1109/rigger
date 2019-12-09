@@ -29,12 +29,9 @@ then
 fi
 mkdir -p $deployTmpDir
 
-cd $prjHome/src/rigger
-./dep.sh ensure
-
 binName=rigger
-cd $prjHome/src
-./go.sh build -o ${binName}.bin rigger/main/rigger/main.go 
+cd $prjHome/rigger/main/rigger
+go build -o ${binName}.bin main.go 
 mv ${binName}.bin $deployTmpDir/$binName
 
 installDstDir=/usr/local/bin
