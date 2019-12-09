@@ -8,12 +8,13 @@ import (
 	"testing"
 )
 
+//export PRJ_HOME=/Users/gibsonli/devspace/personal/rigger/demo ;go test -v
 func TestRconf(t *testing.T) {
-	prjHome := os.Getenv("GOPATH") + "/demo"
+	prjHome := os.Getenv("PRJ_HOME")
 	rconfDir := prjHome + "/conf/rigger"
-	logger, _ := golog.NewSimpleLogger(golog.NewStdoutWriter(), golog.LEVEL_DEBUG, golog.NewConsoleFormater())
+	logger := golog.NewSimpleLogger(golog.NewConsoleWriter(), golog.NewConsoleFormater(golog.NewSimpleFormater()))
 	extArgs := map[string]string{
-		"prj_home": prjHome,
+		"prjHome": prjHome,
 	}
 
 	riggerConf, err := NewRiggerConf(rconfDir, extArgs, logger)

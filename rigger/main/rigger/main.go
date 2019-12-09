@@ -10,7 +10,6 @@ import (
 
 	"errors"
 	"flag"
-	"fmt"
 	"io/ioutil"
 	"os"
 	"strings"
@@ -25,11 +24,8 @@ func main() {
 	fs.StringVar(&rconfDir, "rconfDir", "", "rigger conf dir")
 	fs.Parse(os.Args[1:])
 
-	logger, err := golog.NewSimpleLogger(golog.NewStdoutWriter(), logLevel, golog.NewConsoleFormater())
-	if err != nil {
-		fmt.Println(err.Error())
-		os.Exit(errno.E_SYS_INIT_LOG_FAIL)
-	}
+	logger := golog.NewSimpleLogger(golog.NewConsoleWriter(), golog.NewConsoleFormater(golog.NewSimpleFormater())).
+		SetLogLevel(logLevel)
 
 	rconfDir = strings.TrimRight(rconfDir, "/")
 	if rconfDir == "" {
